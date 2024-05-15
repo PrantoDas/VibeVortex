@@ -1,0 +1,7 @@
+export interface UserInfo {
+    name: string;
+    email: string;
+    password?: string;
+    birthdate?: Date;
+    profilePhoto?: string;
+}

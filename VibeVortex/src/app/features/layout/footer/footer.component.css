@@ -1,0 +1,18 @@
+.app-footer {
+    margin-top: auto;
+    /* Ensures footer is at the bottom of the page */
+    width: 100%;
+}
+
+.footer-toolbar {
+    background-color: #424242;
+    /* Dark gray */
+    color: #ffffff;
+    /* White text for contrast */
+    justify-content: center;
+    padding: 15px;
+}
+
+.footer-content {
+    font-size: 14px;
+}

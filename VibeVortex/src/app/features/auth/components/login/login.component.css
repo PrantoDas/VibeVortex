@@ -1,0 +1,29 @@
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10vh;
+}
+
+mat-card {
+    width: 400px;
+    padding: 1rem;
+}
+
+.full-width-input {
+    width: 100%;
+}
+
+.forgot-password-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+mat-card-header {
+    padding-bottom: 1rem;
+}
+
+mat-progress-bar {
+    margin-top: 15px;
+}

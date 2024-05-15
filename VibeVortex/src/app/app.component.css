@@ -1,0 +1,26 @@
+.mat-toolbar-row {
+    justify-content: space-between;
+    height: 5rem;
+}
+
+.app-name {
+    cursor: pointer;
+}
+
+.toolbar-content-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+mat-sidenav-container .content {
+    height: 84.5dvh;
+}
+
+.sidenav-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

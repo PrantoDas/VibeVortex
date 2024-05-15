@@ -1,0 +1,10 @@
+<!-- post-creator.component.html -->
+<div class="post-creator">
+  <mat-card>
+    <quill-editor [(ngModel)]="postContent" placeholder="What's on your mind?"></quill-editor>
+    <div class="post-actions">
+      <mat-slide-toggle color="primary" [(ngModel)]="isPublic">Public</mat-slide-toggle>
+      <button mat-raised-button color="primary" (click)="submitPost()" [disabled]="!postContent">Post</button>
+    </div>
+  </mat-card>
+</div>

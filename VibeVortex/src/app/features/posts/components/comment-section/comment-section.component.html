@@ -1,0 +1,45 @@
+<div class="app-comment-section">
+    <div *ngIf="isLoading">
+        <mat-progress-bar mode="indeterminate" class="isLoading"></mat-progress-bar>
+    </div>
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+    <div *ngIf="!isLoading && !error">
+        <div class="comment-section">
+            <!-- New Comment Input -->
+            <div class="add-comment">
+                <mat-form-field class="comment-input" appearance="outline">
+                    <textarea matInput placeholder="Write a comment..." [(ngModel)]="newCommentText"></textarea>
+                </mat-form-field>
+                <button mat-icon-button aria-label="Post comment" (click)="addComment()">
+                    <mat-icon>send</mat-icon>
+                </button>
+            </div>
+
+            <!-- Comment List -->
+            <div *ngFor="let comment of comments" class="comment">
+                <img class="commenter-pic" [src]="comment.authorPicture"
+                    alt="{{ comment.authorName }}'s profile picture">
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <span class="commenter-name">{{ comment.authorName }}</span>
+                        <span class="comment-date" [title]="comment.timestamp | date:'fullDate'">{{ comment.timestamp |
+                            amTimeAgo }}</span>
+                    </div>
+                    <p class="comment-body">{{ comment.content }}</p>
+                    <div class="comment-footer">
+                        <div class="comment-footer">
+                            <mat-icon class="comment-action" (click)="toggleLike(comment)" [class.liked]="comment.liked">thumb_up</mat-icon>
+                            <span class="likes-count">{{ comment.likes }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isLoadingMore">
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div>
+            <button mat-button *ngIf="comments.length < commentsCount" (click)="loadMoreComments()">
+                Load more comments
+            </button>
+        </div>
+    </div>
+</div>

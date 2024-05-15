@@ -1,0 +1,60 @@
+/* Container for the post creator with increased padding for more space */
+.post-creator {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+/* Post actions area styling */
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    /* Same as toolbar for consistency */
+}
+
+/* Style for the post button, both enabled and disabled states */
+.post-actions button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-actions button:enabled {
+    background-color: #1976d2;
+    /* Primary color for enabled state */
+    color: white;
+}
+
+.post-actions button:disabled {
+    background-color: #e0e0e0;
+    /* Disabled state */
+    color: #bbb;
+    cursor: default;
+}
+
+/* Slide toggle styling if needed */
+.mat-slide-toggle.mat-accent .mat-slide-toggle-thumb {
+    background-color: #1976d2;
+    /* Your primary color */
+}
+
+.mat-slide-toggle.mat-accent .mat-slide-toggle-bar {
+    background-color: rgba(25, 118, 210, 0.5);
+    /* Lighter or transparent primary color */
+}
+
+
+:host ::ng-deep .ql-container .ql-editor {
+    min-height: 120px;
+}

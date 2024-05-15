@@ -1,0 +1,180 @@
+.app-comment-section {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-section {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* New comment input field styling */
+.add-comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+.comment-input mat-form-field {
+    width: 100%;
+}
+
+.comment-input textarea {
+    min-height: 50px;
+}
+
+/* Individual comment styling */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.commenter-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.commenter-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment-date {
+    color: #757575;
+    font-size: 0.85em;
+    /* Adjust font size to match the example */
+}
+
+.comment-body {
+    font-size: 1em;
+    color: #333;
+    margin-top: 5px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.comment-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment-action {
+    cursor: pointer;
+    color: #757575;
+    transition: color 0.3s ease;
+}
+
+.likes-count {
+    margin-left: 8px;
+    display: inline-block;
+    font-size: 1em;
+}
+
+/* Hover effects */
+.comment-action:hover,
+.load-more-comments:hover {
+    color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+    color: #d32f2f;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Loading spinner styling */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 'Load more comments' button styling */
+.load-more-comments {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: #0056b3;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 15px;
+}
+
+.load-more-comments:hover {
+    text-decoration: underline;
+    background-color: #f7f7f7;
+}
+
+/* Icon button styling */
+button mat-icon-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    vertical-align: middle;
+}
+
+button mat-icon-button mat-icon {
+    vertical-align: middle;
+}
+
+/* Additional style adjustments */
+/* Use flexbox to lay out the comment date and the like button side by side */
+.comment-footer {
+    justify-content: space-between;
+    /* Space between like count and the date */
+    align-items: center;
+    /* Vertically align items in the footer */
+    margin-top: 8px;
+    /* Space between comment body and footer */
+}
+
+/* Hover state for like button for a visual feedback */
+.comment-action:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+    /* Slightly increase the size */
+}
+
+mat-progress-bar.isLoading {
+    width: 30dvw;
+}
+
+mat-icon.liked {
+    color: #0056b3;
+    transform: scale(1.1);
+}

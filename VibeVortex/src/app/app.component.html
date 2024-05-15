@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Navigation Component -->
+  <mat-sidenav #drawer position="end">
+    <mat-nav-list>
+      <a color="primary" mat-list-item routerLink="/" (click)="drawer.close()"> <mat-icon>home</mat-icon> Home</a>
+      <a mat-list-item routerLink="/login" (click)="drawer.close()" *ngIf="!userLoggedIn"><mat-icon>login</mat-icon>
+        Login </a>
+      <a mat-list-item (click)="logout()" *ngIf="userLoggedIn">
+        <mat-icon>exit_to_app</mat-icon>Logout</a>
+      <a mat-list-item routerLink="/register" (click)="drawer.close()"
+        *ngIf="!userLoggedIn"><mat-icon>person_add</mat-icon> Register</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="toolbar-content-left">
+        <span class="app-name" routerLink="/">{{title}}</span>
+        <span class="spacer"></span>
+
+        <app-search></app-search>
+      </span>
+      <span class="toolbar-content-right">
+        <app-notifications *ngIf="userLoggedIn"></app-notifications>
+
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <!-- Main Content Area -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
+</mat-sidenav-container>

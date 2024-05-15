@@ -1,0 +1,71 @@
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10vh;
+}
+
+mat-card {
+    width: 400px;
+    padding: .5vw;
+}
+
+.full-width-input {
+    width: 100%;
+}
+
+mat-card-header {
+    padding-bottom: 1rem;
+}
+
+mat-progress-bar {
+    margin-top: 15px;
+}
+
+.mat-success {
+    color: green;
+    /* Or any color indicating 'success' */
+    font-size: 75%;
+    margin-top: 4px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.file-input-wrapper input {
+    display: none;
+}
+
+.file-input-wrapper .mat-mdc-button-base {
+    position: relative;
+    width: 100%;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+}
+
+.file-input-wrapper .photo-label {
+    display: inline-block;
+    max-width: 17rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.full-width-input.mat-mdc-button-base {
+    margin-top: 15px;
+}
+
+.input-wrapper mat-error {
+    align-self: flex-start;
+    font-size: var(--mat-form-field-subscript-text-size);
+    position: relative;
+}
+
+.confirm-password-input-wrapper mat-error {
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
